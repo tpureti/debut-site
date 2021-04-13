@@ -1,0 +1,257 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@use 'base/_colors' as *;
+@use 'base/_fonts' as *;
+@use 'base/_mixins' as *;
+
+//NAVIGATION BAR BACKGROUND
+nav {
+  display: flex;
+  justify-content: center;
+  max-width: min(100%);
+  position: relative;
+  top: 0;
+  z-index: 99;
+  //
+  background: $dark-brown;
+  border-bottom: 1px solid rgba($bright-gold, 0.1);
+
+  @include mq-breakpoint(600px) {
+    justify-content: flex-end;
+    text-align: right;
+  }
+
+  @include mq-breakpoint(600px) {
+    position: sticky;
+  }
+
+  a {
+    outline: none;
+  }
+}
+
+.nav_title {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 1;
+  height: inherit;
+  position: relative;
+  padding: 0.5rem 2rem;
+  box-sizing: border-box;
+  justify-content: center;
+  align-self: center;
+  //
+  background-color: var(--clr-darker-red);
+
+  .text {
+    font-family: var(--serif-font);
+    width: auto;
+    font-style: italic;
+    font-size: 4rem;
+    letter-spacing: -2.5px;
+    line-height: 90%;
+    text-align: center;
+    //
+    font-weight: 550;
+    color: var(--clr-bright-gold);
+    @extend .title-shadow;
+
+    @include mq-breakpoint(600px) {
+      font-size: 1.875rem;
+      margin-top: 0.875rem;
+    }
+
+    @include mq-breakpoint(900px) {
+      font-size: 3rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: flex;
+    align-self: center;
+    outline: none;
+  }
+
+  @include mq-breakpoint(600px) {
+    justify-content: center;
+    display: none;
+  }
+}
+
+//NAVIGATION BAR
+.nav_cont {
+  width: min(65rem, 100%);
+  padding: 1.5em 2rem;
+  display: flex;
+  flex-shrink: 1;
+  flex-direction: row;
+  z-index: 1;
+  box-sizing: border-box;
+  //colors
+  background: var(--clr-darker-brown);
+  border-left: 1px solid rgba($bright-gold, 0.1);
+  border-right: 1px solid rgba($bright-gold, 0.1);
+
+  //DESKTOP + TABLET VIEW
+  @include mq-bp-min(601px) {
+    padding: 0;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+    > .nav_links {
+      display: flex;
+      width: inherit;
+      justify-content: space-evenly;
+    }
+  }
+
+  @include mq-breakpoint(600px) {
+    flex-direction: column;
+    height: 4.5em;
+    padding: 0;
+  }
+
+  //NAVIGATION LINKS
+
+  .nav_links a {
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin: 0 0.25em;
+    padding: 0.5rem 0;
+    display: flex;
+    //colors
+    color: var(--clr-darker-gold);
+    outline: none;
+    //
+    transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    //focus states
+    &:focus,
+    &:hover {
+      transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+      //colors
+      color: var(--clr-bright-red);
+    }
+
+    //MOBILE LOOK
+    @include mq-breakpoint(600px) {
+      border-top: 1px solid rgba($bright-gold, 0.1);
+      padding: 0.625rem;
+      margin: 0;
+      font-size: 1.625rem;
+      letter-spacing: 0.5px;
+      justify-content: flex-end;
+      box-sizing: border-box;
+
+      &:first-child {
+        border: none;
+      }
+    }
+
+    //FONT SIZING
+    @include mq-bp-min(600px) {
+      font-size: 1.625rem;
+    }
+
+    @include mq-bp-min(768px) {
+      font-size: 1.7rem;
+    }
+
+    @include mq-bp-min(900px) {
+      font-size: 1.875rem;
+    }
+
+    @include mq-bp-min(1200px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+//NAVIGATION LOGO
+.nav_logo {
+  height: auto;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-shrink: 1;
+  z-index: 99;
+  align-self: flex-start;
+  background: var(--clr-darker-brown);
+  //DESKTOP ORIENTATION
+  @include mq-bp-min(600px) {
+    justify-content: center;
+    display: none;
+  }
+  //MOBILE
+  @include mq-breakpoint(600px) {
+    > div {
+      display: flex;
+      align-self: center;
+    }
+  }
+  img {
+    display: flex;
+    width: 0rem;
+    display: none;
+    align-self: flex-start;
+
+    //MOBILE PORTRAIT VIEW
+
+    @include mq-breakpoint(600px) {
+      width: 3.5rem;
+      display: flex;
+      margin: 0.5rem 0 0.5rem 0.5rem;
+      align-self: flex-start;
+    }
+  }
+}
+
+//HAMBUGER MENU CSS
+@include mq-breakpoint(600px) {
+  .nav_links {
+    display: flex;
+    width: calc(100vw - 3px);
+    flex-direction: column;
+    position: relative;
+    transform: translateY(-230%);
+    transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    //
+    background: var(--clr-darker-brown);
+    border: 1px solid rgba($bright-gold, 0.1);
+  }
+
+  .show {
+    transform: translateY(0%);
+  }
+}
+
+//NAV ICON
+.navicon {
+  font-family: var(--anicons);
+  font-size: 3.25rem;
+  font-variation-settings: "TIME" 1;
+  transition: font-variation-settings 0.4s ease;
+  position: absolute;
+  top: 0rem;
+  right: 0rem;
+  margin: 0.5rem;
+  display: flex;
+  outline: none;
+  cursor: pointer;
+  //colors
+  color: var(--clr-darker-gold);
+  transition: 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  @include mq-bp-min(601px) {
+    display: none;
+  }
+}
+
+.navi_show {
+  font-variation-settings: "TIME" 100;
+  color: var(--clr-bright-red);
+}

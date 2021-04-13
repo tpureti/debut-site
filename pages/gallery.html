@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!--  META TAGS -->
+  <meta name="description" content="Menu page of The Rusted Tavern">
+  <meta name="keywords" content="restaurant, bar, food, california, menu, menu items">
+  <meta name="author" content="Thushara Pureti">
+  <meta name="robots" content="index">
+  <meta name="copyright" content="Rusted Tavern">
+
+  <!-- FAVICON -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" type="text/css" title="CSS" href="../css/main.css">
+
+  <!-- FONTS -->
+
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap"
+  rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"> -->
+
+  <!-- ICONS -->
+
+  <script src="https://kit.fontawesome.com/8487c2004b.js" crossorigin="anonymous"></script>
+  
+  <link href="https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css" rel="stylesheet">
+
+  <title>Gallery</title>
+
+</head>
+
+<body>
+<nav aria-label="navigation">
+  <div class="nav_cont" aria-label="navigation container">
+    <div class="nav_title" aria-role="navigation" aria-label="navigation title"><a href="home.html" aria-label="home"
+        tabindex="0"><span class="text">Rusted Tavern</span></a></div>
+    <div class="nav_logo">
+      <a tabindex="0" href="home.html" aria-label="home"><img src="../images/logo2.svg" alt="Rusted Tavern logo"
+          aria-label="logo" /></a>
+      <span class="navicon" tabindex="0" aria-label="mobile navigation menu button"
+        aria-roledescription="click to open and close the navigation on mobile" aria-expanded="false">A</span>
+    </div>
+    <div class="nav_links">
+      <a href="menu.html" tabindex="0">Menu</a>
+      <a href="locations.html" tabindex="0">Locations</a>
+      <a href="gallery.html" tabindex="0">Gallery</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  let menu = document.querySelector('.nav_links')
+  let menuButton = document.querySelector('.navicon')
+
+  menuButton.addEventListener('click', function () {
+    let menuIsClosed = !menu.classList.contains('show')
+
+    if (menuIsClosed) {
+      menu.classList.add('show')
+      menuButton.classList.add('navi_show')
+      menuButton.setAttribute('aria-expanded', 'true');
+    } else {
+      menu.classList.remove('show')
+      menuButton.classList.remove('navi_show')
+      menuButton.setAttribute('aria-expanded', 'false');
+    }
+  })
+</script>
+
+  <picture>
+    <picture>
+      <img srcset="../images/bannerimg-lowres.jpg 1x,
+                     ../images/bannerimg-highres.jpg 2x" src="../images/bannerimg-highres.jpg" alt="banner" />
+    </picture>
+
+  </picture>
+
+  <header>
+    <h1 class="title-shadow">Gallery</h1>
+  </header>
+
+  <main class="gallery large margin-auto" aria-label="gallery">
+    
+  <picture class="imgs" tabindex="0">
+  <a href="../images/gallery/high res/breakfast1-english-original.jpg" target="_blank" tabindex="0">
+      <img src="../images/gallery/thumbs/breakfast1-english-thumb.jpg" alt="english breakfast" srcset="">
+      </a>
+      <!-- <h2>Full English Breakfast</h2> -->
+  </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/breakfast2-toast-original.jpg" target="_blank" rel="noopener noreferrer" tabindex="0">
+      <img src="../images/gallery/thumbs/breakfast2-toast-thumb.jpg" alt="toast" srcset="">
+    </a>
+    <!-- <h2>Toast</h2> -->
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/breakfast3-coffee-original.jpg" tabindex="0" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/breakfast3-coffee-thumb.jpg" alt="coffee" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+      <a href="../images/gallery/high res/breakfast4-omelet-original.jpg" target="_blank" rel="noopener noreferrer">
+        <img src="../images/gallery/thumbs/breakfast4-omelet-thumb.jpg" alt="omelet" srcset="">
+      </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+      <a href="../images/gallery/high res/breakfast5-crepes-original.jpg" target="_blank" rel="noopener noreferrer">
+        <img src="../images/gallery/thumbs/breakfast5-crepes-thumb.jpg" alt="crepe" srcset="">
+      </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dessert1-cheesecake-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dessert1-cheesecake-thumb.jpg" alt="cheesecake" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dessert2-tiramisu-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dessert2-tiramisu-thumb.jpg" alt="tiramisu" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dessert3-cremebrulee-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dessert3-cremebrulee-thumb.jpg" alt="creme brulee" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dinner1-steak-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dinner1-steak-thumb.jpg" alt="steak" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dinner2-grilledchicken-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dinner2-grilledchicken-thumb.jpg" alt="grilled chicken" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dinner3-potpie-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dinner3-potpie-thumb.jpg" alt="pot pie" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dinner4-surfnturf-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dinner4-surfnturf-thumb.jpg" alt="surf n' turf - steak and shrimp'" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dinner5-chicken-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dinner5-chicken-thumb.jpg" alt="chicken dinner" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/dinner6-pasta-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/dinner6-pasta-thumb.jpg" alt="pasta" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/drink1-beer-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/drink1-beer-thumb.jpg" alt="beer" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/drink2-wine-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/drink2-wine-thumb.jpg" alt="wine" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/lunch1-sandwich-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/lunch1-sandwich-thumb.jpg" alt="sandwich" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="http://" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/lunch2-burger-thumb.jpg" alt="burger" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/lunch3-burger2-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/lunch3-burger2-thumb.jpg" alt="another burger" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/lunch4-salad-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/lunch4-salad-thumb.jpg" alt="salad" srcset="">
+    </a>
+    </picture>
+
+    <picture class="imgs" tabindex="0">
+    <a href="../images/gallery/high res/lunch5-soup-original.jpg" target="_blank" rel="noopener noreferrer">
+      <img src="../images/gallery/thumbs/lunch5-soup-thumb.jpg" alt="soup" srcset="">
+    </a>
+    </picture>
+  
+  </main>
+
+  <footer>
+    <div class="container" aria-label="footer container">
+      <section class="footer_links">
+        <h2>Directory</h2>
+        <a href="home.html" tabindex="0">Home</a><a href="menu.html" tabindex="0">Menu</a><a href="locations.html"
+          tabindex="0">Locations</a><a href="gallery.html" tabindex="0">Gallery</a><a href="contact.html"
+          tabindex="0">Contact</a>
+      </section>
+      <section>
+        <h2>Social Media</h2>
+        <p>Come follow us on these social media sites for news and updates!</p>
+        <a href="" target="_blank" tabindex="0" aria-label="twitter"><span class="fab fa-twitter"></span></a>
+        <a href="" target="_blank" tabindex="0" aria-label="facebook"><span class="fab fa-facebook-f"></span></span></a>
+        <a href="" target="_blank" tabindex="0" aria-label="instagram"><span class="fab fa-instagram"></span></a>
+      </section>
+      <section>
+        <h2>Info</h2>
+        @2020 | Thushara Pureti <br> <a href="privacypolicy.html" tabindex="0">Privacy Policy</a> <br> <span
+          id="demo"></span>
+      </section>
+    </div>
+    <script type="text/javascript">
+      {
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleString();
+      }
+    </script>
+  </footer>
+
+</body>
+
+</html>

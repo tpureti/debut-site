@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@use 'base/__colors' as *;
+@use 'base/__fonts' as *;
+@use 'base/__mixins' as *;
+
+.locations {
+  @extend .flexbox;
+  justify-content: center;
+}
+
+.flex-items {
+  display: flex;
+  min-width: 18.75rem;
+  flex: 0.5 1 calc((42.6875rem - 100%) * 999);
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  //
+  padding: 1.25rem;
+  background-color: var(--clr-dark-brown);
+  @extend .gold-border;
+
+  h2 {
+    margin-bottom: 0.625em;
+    //
+    border-bottom: 1px solid var(--clr-pale-yellow);
+  }
+
+  span {
+    font-size: 120%;
+    font-weight: 600;
+  }
+
+  .icon::after {
+    font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f5a0";
+    //
+    display: inline-block;
+    margin-left: 0.5rem;
+    //
+    font-size: 150%;
+  }
+
+  @include safari {
+    margin: 0.5rem;
+  }
+
+  @include mq-breakpoint(37.5em) {
+    margin: 0.5rem 0;
+  }
+}

@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+@use 'base/_colors' as *;
+
+//MEDIA QUERIES GENERAL
+@mixin mq-breakpoint($width) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin mq-bp-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mq-orientation($width-or-height, $value, $orientation) {
+  @media screen and 
+  (max-#{$width-or-height}: $value) and (orientation: $orientation) {
+    @content;
+  }
+}
+
+// SAFARI 11+
+@mixin safari {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      @content;
+    }
+  }
+}
+
+/* UTILITY CLASSES & EXTENDS */
+.margin-auto {
+  margin: 1rem auto;
+}
+
+.simple-padding {
+  padding: 1.625rem;
+}
+
+.small {
+  max-width: min(50rem, 100%);
+}
+
+.medium {
+  max-width: min(60rem, 100%);
+}
+
+.large {
+  max-width: min(70rem, 100%);
+}
+
+//FLEXBOX
+
+.flexbox {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  gap: 1rem;
+  //
+  background-color: var(--clr-darker-brown);
+
+  @include safari {
+    margin: 1rem auto;
+  }
+
+  @include mq-breakpoint(37.5em) {
+    padding: 0;
+  }
+}
+
+//GRID
+
+$grid: (
+  twelve: span 12,
+  eleven: span 11,
+  ten: span 10,
+  nine: span 9,
+  eight: span 8,
+  seven: span 7,
+  six: span 6,
+  five: span 5,
+  four: span 4,
+  three: span 3,
+  two: span 2,
+  one: span 1,
+);
+
+@each $name, $span in $grid {
+  .#{$name}-column {
+    grid-column: #{$span};
+  }
+}

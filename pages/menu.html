@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!--  META TAGS -->
+  <meta name="description" content="Menu page of The Rusted Tavern">
+  <meta name="keywords" content="restaurant, bar, food, california, menu, menu items">
+  <meta name="author" content="Thushara Pureti">
+  <meta name="robots" content="index">
+  <meta name="copyright" content="Rusted Tavern">
+
+  <!-- FAVICON -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" type="text/css" title="CSS" href="../css/main.css">
+
+  <!-- FONTS -->
+
+<!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap"
+  rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet"> -->
+
+  <!-- ICONS -->
+
+<script src="https://kit.fontawesome.com/8487c2004b.js" crossorigin="anonymous"></script>
+
+<link href="https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css" rel="stylesheet">
+
+  <title>Menu</title>
+
+</head>
+
+<!-- BODY -->
+
+<body>
+  <nav aria-label="navigation">
+    <div class="nav_cont" aria-label="navigation container">
+      <div class="nav_title" aria-role="navigation" aria-label="navigation title"><a href="home.html" aria-label="home"
+          tabindex="0"><span class="text">Rusted Tavern</span></a></div>
+      <div class="nav_logo">
+        <a tabindex="0" href="home.html" aria-label="home"><img src="../images/logo2.svg" alt="Rusted Tavern logo"
+            aria-label="logo" /></a>
+        <span class="navicon" tabindex="0" aria-label="mobile navigation menu button"
+          aria-roledescription="click to open and close the navigation on mobile" aria-expanded="false">A</span>
+      </div>
+      <div class="nav_links">
+        <a href="menu.html" tabindex="0">Menu</a>
+        <a href="locations.html" tabindex="0">Locations</a>
+        <a href="gallery.html" tabindex="0">Gallery</a>
+        <a href="contact.html" tabindex="0">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    let menu = document.querySelector('.nav_links')
+    let menuButton = document.querySelector('.navicon')
+
+    menuButton.addEventListener('click', function () {
+      let menuIsClosed = !menu.classList.contains('show')
+
+      if (menuIsClosed) {
+        menu.classList.add('show')
+        menuButton.classList.add('navi_show')
+        menuButton.setAttribute('aria-expanded', 'true');
+      } else {
+        menu.classList.remove('show')
+        menuButton.classList.remove('navi_show')
+        menuButton.setAttribute('aria-expanded', 'false');
+      }
+    })
+  </script>
+
+  <!-- BANNER -->
+
+  <picture>
+    <img srcset="../images/bannerimg-lowres.jpg 1x,
+                 ../images/bannerimg-highres.jpg 2x" src="../images/bannerimg-highres.jpg" alt="banner" />
+  </picture>
+
+  <!-- HEADER -->
+
+  <header>
+    <h1 class="title-shadow">Menus</h1>
+  </header>
+
+  <main class="standard">
+    <section title="breakfast">
+      <h2>Breakfast (8-11AM)</h2>
+      <p><strong>Make Your Own Omelette</strong>: Ham or bacon or sausage <i>and</i> onions, tomatoes, spinach,
+        jalapenos</p>
+      <p><b>Scrambled Eggs</b>: Fluffy scrambled eggs (replace with egg whites)</p>
+      <p><b>Toast</b>: Wheat, white, sourdough</p>
+      <p><b>Bacon or Sausage</b>: Pork, Turkey, Vegan</p>
+      <p><b>Potatoes</b>: Hashbrowns or potato hash</p>
+    </section>
+
+    <section title="lunch">
+      <h2>Lunch (11-4PM)</h2>
+      <p>
+        <b>Sandwich</b>: Chicken or turkey, lettuce, tomato<br>
+        <b>Burger</b>: Normal or bean or beyond, lettuce, tomato, cheese<br>
+        <b>Salad</b>: Ceasar, Cobb, Italian<br>
+        <b>Soup</b>: Bisque, Tomato, Split Pea<br>
+      </p>
+    </section>
+
+    <section title="dinner">
+      <h2>Dinner (4-10PM)</h2>
+      <p>
+        <b>Roast Beef</b>: beef roast, mashed potatoes, carrots<br>
+        <b>Pot Pie</b>: Chicken or beef or lamb<br>
+        <b>Surf n' Turf</b>: Steak and lobster<br>
+        <b>Fried Chicken</b>: Crispy or extra crispy<br>
+        <b>Pasta</b>: Spaghetti or penne<br>
+      </p>
+      <h3>Desserts</h3>
+      <p>
+        <b>Cheesecake</b>: New York style, strawberries and whipped cream<br>
+        <b>Tiramisu</b>: Served with coffee<br>
+      </p>
+      <h3>Drinks</h3>
+      <p>
+      <ul>
+        <li>Red Wine</li>
+        <li>White Wine</li>
+        <li>Champagne/Sparkling/Rose</li>
+        <li>Beer</li>
+        <li>Cocktails</li>
+      </ul>
+      </p>
+    </section>
+
+  </main>
+
+ <footer>
+  <div class="container" aria-label="footer container">
+    <section class="footer_links">
+      <h2>Directory</h2>
+      <a href="home.html" tabindex="0">Home</a><a href="menu.html" tabindex="0">Menu</a><a href="locations.html"
+        tabindex="0">Locations</a><a href="gallery.html" tabindex="0">Gallery</a><a href="contact.html"
+        tabindex="0">Contact</a>
+    </section>
+    <section>
+      <h2>Social Media</h2>
+      <p>Come follow us on these social media sites for news and updates!</p>
+      <a href="" target="_blank" tabindex="0" aria-label="twitter"><span class="fab fa-twitter"></span></a>
+      <a href="" target="_blank" tabindex="0" aria-label="facebook"><span class="fab fa-facebook-f"></span></span></a>
+      <a href="" target="_blank" tabindex="0" aria-label="instagram"><span class="fab fa-instagram"></span></a>
+    </section>
+    <section>
+      <h2>Info</h2>
+      @2020 | Thushara Pureti <br> <a href="privacypolicy.html" tabindex="0">Privacy Policy</a> <br> <span
+        id="demo"></span>
+    </section>
+  </div>
+  <script type="text/javascript">
+    {
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleString();
+    }
+  </script>
+</footer>
+
+</body>
+
+</html>

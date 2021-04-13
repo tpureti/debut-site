@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <!--  META TAGS -->
+  <meta name="description" content="Menu page of The Rusted Tavern">
+  <meta name="keywords" content="restaurant, bar, food, california, menu, menu items">
+  <meta name="author" content="Thushara Pureti">
+  <meta name="robots" content="index">
+  <meta name="copyright" content="Rusted Tavern">
+
+  <!-- FAVICON -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" type="text/css" title="CSS" href="../css/main.css">
+
+  <!-- FONTS -->
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&display=swap"
+  rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link
+  href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+  rel="stylesheet">
+
+  <!-- ICONS -->
+
+<script src="https://kit.fontawesome.com/8487c2004b.js" crossorigin="anonymous"></script>
+
+<link href="https://res.cloudinary.com/dr6lvwubh/raw/upload/v1581441981/Anicons/anicons-regular.css" rel="stylesheet">
+
+  <title>Contact</title>
+
+</head>
+
+<body>
+    <nav aria-label="navigation">
+      <div class="nav_cont" aria-label="navigation container">
+        <div class="nav_title" aria-role="navigation" aria-label="navigation title"><a href="home.html" aria-label="home"
+            tabindex="0"><span class="text">Rusted Tavern</span></a></div>
+        <div class="nav_logo">
+          <a tabindex="0" href="home.html" aria-label="home"><img src="../images/logo2.svg" alt="Rusted Tavern logo"
+              aria-label="logo" /></a>
+          <span class="navicon" tabindex="0" aria-label="mobile navigation menu button"
+            aria-roledescription="click to open and close the navigation on mobile" aria-expanded="false">A</span>
+        </div>
+        <div class="nav_links">
+          <a href="menu.html" tabindex="0">Menu</a>
+          <a href="locations.html" tabindex="0">Locations</a>
+          <a href="gallery.html" tabindex="0">Gallery</a>
+          <a href="contact.html" tabindex="0">Contact</a>
+        </div>
+      </div>
+    </nav>
+    
+    <script>
+      let menu = document.querySelector('.nav_links')
+      let menuButton = document.querySelector('.navicon')
+
+      menuButton.addEventListener('click', function () {
+        let menuIsClosed = !menu.classList.contains('show')
+
+        if (menuIsClosed) {
+          menu.classList.add('show')
+          menuButton.classList.add('navi_show')
+          menuButton.setAttribute('aria-expanded', 'true');
+        } else {
+          menu.classList.remove('show')
+          menuButton.classList.remove('navi_show')
+          menuButton.setAttribute('aria-expanded', 'false');
+        }
+      })
+    </script>
+
+  <picture>
+    <img srcset="../images/bannerimg-lowres.jpg 1x,
+                   ../images/bannerimg-highres.jpg 2x" src="../images/bannerimg-highres.jpg"
+      alt="banner of a cozy looking restaurant, close up of a table is a menu with a bright candle next to it" />
+  </picture>
+
+  <header>
+    <h1 class="title-shadow">Contact</h1>
+  </header>
+  <main class="standard" aria-label="contact information">
+    <h2>Please fill out the form below.</h2>
+    <p>Expect a response within 1-2 weeks. Thank you for your patience.</p>
+  </main>
+
+  <main class="standard" aria-label="contact form">
+
+    <form class="form" name="myform" action="mailto:rustedtavern@gmail.com" onsubmit="return validateForm()">
+
+      <section aria-label="first name section">
+        <label for="fname" class="form_label">
+          First Name*
+        </label>
+        <input type="text" id="fname" name="firstname" onfocus="this.placeholder=''" placeholder="First Name" required="">
+      </section>
+
+      <section aria-label="last name section">
+        <label for="lname" class="form_label">
+          Last Name*
+        </label>
+        <input type="text" id="lname" name="lastname" onfocus="this.placeholder=''" placeholder="Last Name" required="">
+      </section>
+
+      <section aria-label="e-mail section">
+        <label for="email" class="form_label">
+          E-mail*
+        </label>
+        <input type="text" id="email" name="emailaddress" onfocus="this.placeholder=''" placeholder="xxx@example.com" required="">
+      </section>
+
+      <section aria-label="phone number section">
+        <label for="phone" class="form_label">
+          Phone Number*
+        </label>
+        <input type="text" id="phone" name="phonenumber" onfocus="this.placeholder=''" placeholder="(###)-###-####" required="">
+      </section>
+
+      <section aria-label="select location section">
+        <label for="location" class="form_label">
+          Select Location
+        </label>
+        <div class="select">
+          <div id="location">
+            <select id="location" name="location" required="">
+              <option value="select">Select</option>
+              <option value="encino">Encino</option>
+              <option value="thousandoaks">Thousand Oaks</option>
+              <option value="woodlandhills">Woodland Hills</option>
+              <option value="westlakevillage">Westlake Village</option>
+              <option value="ventura">Ventura</option>
+            </select>
+          </div>
+          <div class="icon"></div>
+        </div>
+      </section>
+
+      <section aria-label="your message section">
+        <label for="message" class="form_label">
+          Your Message*
+        </label>
+        <textarea id="message" name="subject" onfocus="this.placeholder=''" placeholder="Write something..."
+          style="height:200px" required=""></textarea>
+      </section>
+
+      <section aria-label="newsletter section">
+          <legend class="bigger-h3" id="newsletter">Would you like to subscribe to our newsletter?</legend>
+          <p>Subscribe for news, deals, etc.</p>
+        <fieldset class="radio" name="newsletter" aria-labelledby="newsletter">
+          <div>
+            <input type="radio" id="1" name="newsletter" tabindex="0" value="yes"><label for="1"><h4>Yeah, sure, why not?</h4>
+            </label>
+            </input>
+          </div>
+
+          <div>
+            <input type="radio" id="2" name="newsletter" tabindex="0" value="no"><label for="2"><h4>No, thanks.</h4>
+            </label>
+            </input>
+          </div>
+
+        </fieldset>
+      </section>
+
+      <input type="submit" value="Submit">
+      </section>
+    </form>
+  </main>
+
+ <footer>
+  <div class="container" aria-label="footer container">
+    <section class="footer_links">
+      <h2>Directory</h2>
+      <a href="home.html" tabindex="0">Home</a><a href="menu.html" tabindex="0">Menu</a><a href="locations.html"
+        tabindex="0">Locations</a><a href="gallery.html" tabindex="0">Gallery</a><a href="contact.html"
+        tabindex="0">Contact</a>
+    </section>
+    <section>
+      <h2>Social Media</h2>
+      <p>Come follow us on these social media sites for news and updates!</p>
+      <a href="" target="_blank" tabindex="0" aria-label="twitter"><span class="fab fa-twitter"></span></a>
+      <a href="" target="_blank" tabindex="0" aria-label="facebook"><span class="fab fa-facebook-f"></span></span></a>
+      <a href="" target="_blank" tabindex="0" aria-label="instagram"><span class="fab fa-instagram"></span></a>
+    </section>
+    <section>
+      <h2>Info</h2>
+      @2020 | Thushara Pureti <br> <a href="privacypolicy.html" tabindex="0">Privacy Policy</a> <br> <span
+        id="demo"></span>
+    </section>
+  </div>
+  <script type="text/javascript">
+    {
+      var d = new Date();
+      document.getElementById("demo").innerHTML = d.toLocaleString();
+    }
+  </script>
+</footer>
+
+  <!-- <script>
+    const fname = document.getElementById("fname");
+
+      fname.addEventListener("input", function (event) {
+        if (fname.validity.valueMissing) {
+          fname.setCustomValidity("I am expecting an e-mail address!");
+        } else {
+          fname.setCustomValidity("");
+        }
+      });
+  </script> -->
+
+</body>
+
+</html>

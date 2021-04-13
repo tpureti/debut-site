@@ -1,0 +1,197 @@
+:root {
+  --sans-font: "Poppins", Helvetica, sans-serif;
+  --serif-font: "Brygada 1918", serif;
+  --anicons: "Anicons Regular", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  //font-variation
+  --text-ital: 0;
+}
+
+/* poppins-regular - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  src: local("Poppins Regular"),
+    url("../../fonts/Poppins/poppins-v15-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../fonts/Poppins/poppins-v15-latin-regular.woff") format("woff");
+  display: swap;
+}
+/* poppins-italic - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  src: local("Poppins Regular Italic"),
+    url("../../fonts/Poppins/poppins-v15-latin-italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../fonts/Poppins/poppins-v15-latin-italic.woff") format("woff");
+  display: swap;
+}
+/* poppins-500 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  src: local("Poppins Medium"),
+    url("../../fonts/Poppins/poppins-v15-latin-500.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../fonts/Poppins/poppins-v15-latin-500.woff") format("woff");
+  display: swap;
+}
+/* poppins-500italic - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+  src: local("Poppins Medium Italic"),
+    url("../../fonts/Poppins/poppins-v15-latin-500italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../fonts/Poppins/poppins-v15-latin-500italic.woff") format("woff");
+  display: swap;
+}
+/* poppins-600 - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  src: local("Poppins Semi-bold"),
+    url("../../fonts/Poppins/poppins-v15-latin-600.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../fonts/Poppins/poppins-v15-latin-600.woff") format("woff");
+  display: swap;
+}
+/* poppins-600italic - latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: italic;
+  font-weight: 600;
+  -webkit-font-smoothing: antialiased;
+  src: local("Poppins Semi-bold Italic"),
+    url("../../fonts/Poppins/poppins-v15-latin-600italic.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../../fonts/Poppins/poppins-v15-latin-600italic.woff") format("woff");
+  display: swap;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 Bold Italic"), local("Brygada1918-BoldItalic"),
+    url("../../fonts/Brygada 1918/Brygada1918-BoldItalic.woff2") format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 Bold"), local("Brygada1918-Bold"),
+    url("../../fonts/Brygada 1918/Brygada1918-Bold.woff2") format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 Italic"), local("Brygada1918-Italic"),
+    url("../../fonts/Brygada 1918/Brygada1918-Italic.woff2") format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 Medium"), local("Brygada1918-Medium"),
+    url("../../fonts/Brygada 1918/Brygada1918-Medium.woff2") format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 SemiBold Italic"),
+    local("Brygada1918-SemiBoldItalic"),
+    url("../../fonts/Brygada 1918/Brygada1918-SemiBoldItalic.woff2")
+      format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-SemiBoldItalic.woff")
+      format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 Medium Italic"), local("Brygada1918-MediumItalic"),
+    url("../../fonts/Brygada 1918/Brygada1918-MediumItalic.woff2")
+      format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 Regular"), local("Brygada1918-Regular"),
+    url("../../fonts/Brygada 1918/Brygada1918-Regular.woff2") format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  src: local("Brygada 1918 SemiBold"), local("Brygada1918-SemiBold"),
+    url("../../fonts/Brygada 1918/Brygada1918-SemiBold.woff2") format("woff2"),
+    url("../../fonts/Brygada 1918/Brygada1918-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: fallback;
+}
+
+/* BRYGADA 1918 - VARIABLE FONTS */
+@font-face {
+  font-family: "Brygada 1918";
+  font-style: normal;
+  src: local("Brygada 1918")
+      url("../../fonts/Brygada 1918/Brygada1918-VariableFont_wght.woff")
+      format("woff"),
+    url("../../fonts/Brygada 1918/Brygada1918-VariableFont_wght.woff2")
+      format("woff2 supports variations");
+  font-weight: 400 700;
+  display: swap;
+}
+
+@font-face {
+  font-family: "Brygada 1918";
+  font-style: italic;
+  src: local("Brygada 1918")
+      url("../../fonts/Brygada 1918/Brygada1918-Italic-VariableFont_wght.woff")
+      format("woff"),
+    url("../../fonts/Brygada 1918/Brygada1918-Italic-VariableFont_wght.woff2")
+      format("woff2 supports variations");
+  font-weight: 400 700;
+  display: swap;
+}
+
+@font-face {
+  font-family: "Anicons Regular";
+  src: url("../../fonts/AniconsGX.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}

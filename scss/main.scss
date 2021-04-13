@@ -1,0 +1,15 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// BASE STYLES
+@use 'base/_colors' as *;
+@use 'base/_fonts' as *;
+@use 'base/_mixins' as *;
+
+//OTHER PAGES
+@use 'layout/_basic';
+@use 'layout/_navigation';
+@use 'layout/_home';
+@use 'layout/_locations';
+@use 'layout/_contact';
+@use 'layout/_gallery';

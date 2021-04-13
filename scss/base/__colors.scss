@@ -1,0 +1,50 @@
+//SASS COLOR MAP
+$colors: (
+  //pale-yellow: #e4c78e,
+  pale-yellow: #f4d89f,
+  bright-gold: #f7be4a,
+  dark-gold: #d09e39,
+  darker-gold: #e9a620,
+  bright-red: #bd2828,
+  dark-red: #621515,
+  darker-red: #370c0c,
+  dark-brown: #1c0606,
+  darker-brown: #150404
+);
+
+//SASS COLOR VARIABLES
+$pale-yellow: #f4d89f;
+//text color
+$bright-gold: #f7be4a;
+//
+$dark-gold: #d09e39;
+//
+$darker-gold: #e9a620;
+//yellow accent color
+$bright-red: #bd2828;
+//main link color
+$dark-red: #621515;
+//red accent color
+$darker-red: #370c0c;
+//dark red accent color
+$dark-brown: #1c0606;
+//main background
+$darker-brown: #150404;
+//background
+
+:root {
+  //NORMAL COLORS
+  @each $name, $color in $colors {
+    --clr-#{$name}: #{$color};
+  }
+}
+
+.gold-border {
+  border: 1px solid rgba($bright-gold, 0.1);
+  //filter: drop-shadow(0 0 1px rgba($darker-gold, 0));
+}
+
+.title-shadow {
+  filter: drop-shadow(1px 1px 1px rgba($dark-brown, 0.3))
+    drop-shadow(0px 0px 2px rgba($dark-gold, 0.8));
+}
