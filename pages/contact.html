@@ -100,35 +100,35 @@
 
     <form class="form" name="myform" action="mailto:rustedtavern@gmail.com" onsubmit="return validateForm()">
 
-      <section aria-label="first name section">
+      <section class="contact" aria-label="first name section">
         <label for="fname" class="form_label">
           First Name*
         </label>
         <input type="text" id="fname" name="firstname" onfocus="this.placeholder=''" placeholder="First Name" required="">
       </section>
 
-      <section aria-label="last name section">
+      <section class="contact" aria-label="last name section">
         <label for="lname" class="form_label">
           Last Name*
         </label>
         <input type="text" id="lname" name="lastname" onfocus="this.placeholder=''" placeholder="Last Name" required="">
       </section>
 
-      <section aria-label="e-mail section">
+      <section class="contact" aria-label="e-mail section">
         <label for="email" class="form_label">
           E-mail*
         </label>
         <input type="text" id="email" name="emailaddress" onfocus="this.placeholder=''" placeholder="xxx@example.com" required="">
       </section>
 
-      <section aria-label="phone number section">
+      <section class="contact" aria-label="phone number section">
         <label for="phone" class="form_label">
           Phone Number*
         </label>
         <input type="text" id="phone" name="phonenumber" onfocus="this.placeholder=''" placeholder="(###)-###-####" required="">
       </section>
 
-      <section aria-label="select location section">
+      <section class="contact" aria-label="select location section">
         <label for="location" class="form_label">
           Select Location
         </label>
@@ -147,7 +147,7 @@
         </div>
       </section>
 
-      <section aria-label="your message section">
+      <section class="contact" aria-label="your message section">
         <label for="message" class="form_label">
           Your Message*
         </label>
@@ -155,7 +155,7 @@
           style="height:200px" required=""></textarea>
       </section>
 
-      <section aria-label="newsletter section">
+      <section class="contact" aria-label="newsletter section">
           <legend class="bigger-h3" id="newsletter">Would you like to subscribe to our newsletter?</legend>
           <p>Subscribe for news, deals, etc.</p>
         <fieldset class="radio" name="newsletter" aria-labelledby="newsletter">
@@ -219,6 +219,17 @@
         }
       });
   </script> -->
+
+  <script>
+    let resizeTimer;
+    window.addEventListener("resize", () => {
+      document.body.classList.add("resize-animation-stopper");
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+      });
+    });
+  </script>
 
 </body>
 

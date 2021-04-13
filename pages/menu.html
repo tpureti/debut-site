@@ -96,7 +96,7 @@
   </header>
 
   <main class="standard">
-    <section title="breakfast">
+    <section class="menu" title="breakfast">
       <h2>Breakfast (8-11AM)</h2>
       <p><strong>Make Your Own Omelette</strong>: Ham or bacon or sausage <i>and</i> onions, tomatoes, spinach,
         jalapenos</p>
@@ -106,7 +106,7 @@
       <p><b>Potatoes</b>: Hashbrowns or potato hash</p>
     </section>
 
-    <section title="lunch">
+    <section class="menu" title="lunch">
       <h2>Lunch (11-4PM)</h2>
       <p>
         <b>Sandwich</b>: Chicken or turkey, lettuce, tomato<br>
@@ -116,8 +116,8 @@
       </p>
     </section>
 
-    <section title="dinner">
-      <h2>Dinner (4-10PM)</h2>
+    <section class="menu" title="dinner">
+      <h2>Dinner (5-11PM)</h2>
       <p>
         <b>Roast Beef</b>: beef roast, mashed potatoes, carrots<br>
         <b>Pot Pie</b>: Chicken or beef or lamb<br>
@@ -172,6 +172,17 @@
     }
   </script>
 </footer>
+
+<script>
+  let resizeTimer;
+  window.addEventListener("resize", () => {
+    document.body.classList.add("resize-animation-stopper");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      document.body.classList.remove("resize-animation-stopper");
+    });
+  });
+</script>
 
 </body>
 

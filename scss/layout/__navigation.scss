@@ -128,6 +128,7 @@ nav {
     color: var(--clr-darker-gold);
     outline: none;
     //
+    //transition-property: none;
     transition: 0.5s cubic-bezier(0.77, 0, 0.175, 1);
     //focus states
     &:focus,

@@ -18,6 +18,11 @@
 
 //GENERAL
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 body,
 p,
 h1,
@@ -110,7 +115,7 @@ header {
   //
   background-color: var(--clr-dark-red);
 
-  @media (max-height: 500px) and (orientation: landscape) {
+  @media (max-height: 600px) and (orientation: landscape) {
     padding: 0.75rem;
   }
 }
@@ -147,8 +152,16 @@ main {
   @extend .gold-border;
 }
 
-section {
-  margin: 0.625rem 1.25rem;
+.menu {
+  margin: 0.625rem;
+
+  @media screen and (max-width: 900px) and (min-width: 768px) and (orientation: landscape) {
+    p,
+    ul,
+    ol {
+      font-size: 70%;
+    }
+  }
 }
 
 article {
