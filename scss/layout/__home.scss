@@ -66,6 +66,8 @@
   //Colors
   color: var(--clr-bright-gold);
   @extend .title-shadow;
+  transition-property: color;
+  transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   //
 
   &::after {
@@ -79,7 +81,7 @@
 
   &:hover,
   &:focus {
-    transition-property: color, filter;
+    transition-property: color;
     transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     //
     outline: none;
