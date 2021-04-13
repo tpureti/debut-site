@@ -184,7 +184,7 @@
 <script>
   //stop transitions on resize
   let resizeTimer;
-  window.addEventListener("DOMContentLoaded", () => {
+  window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
