@@ -757,6 +757,7 @@ nav a {
 }
 @media screen and (max-width: 30rem) {
   .hero_cta a {
+    transition: none;
     font-size: 2rem;
   }
 }

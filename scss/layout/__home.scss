@@ -91,6 +91,7 @@
   }
 
   @include mq-breakpoint(30rem) {
+    transition: none;
     font-size: 2rem;
   }
 }
