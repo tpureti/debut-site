@@ -100,8 +100,8 @@
         <b>PHONE #</b>: (555) 598-4484
         <br><br>
       <h3>Hours</h3>
-      Mon-Thus: 8AM-9PM<br>
-      Friday-Sun: 8AM-10PM<br>
+      Mon-Thus: 8AM-10PM<br>
+      Friday-Sun: 8AM-11PM<br>
       <span class="icon"><a target="_blank" href="https://www.google.com/maps">Get Directions</a></span>
       </p>
     </article>
@@ -113,8 +113,8 @@
         <b>PHONE #</b>: (555) 439-9892
         <br><br>
       <h3>Hours</h3>
-      Mon-Thus: 8AM-9PM<br>
-      Friday-Sun: 8AM-10PM<br>
+      Mon-Thus: 8AM-10PM<br>
+      Friday-Sun: 8AM-11PM<br>
       <span class="icon"><a target="_blank" href="https://www.google.com/maps">Get Directions</a></span>
       </p>
     </article>
@@ -126,8 +126,8 @@
         <b>PHONE #</b>: (555) 182-4940
         <br><br>
       <h3>Hours</h3>
-      Mon-Thus: 8AM-9PM<br>
-      Friday-Sun: 8AM-10PM<br>
+      Mon-Thus: 8AM-10PM<br>
+      Friday-Sun: 8AM-11PM<br>
       <span class="icon"><a target="_blank" href="https://www.google.com/maps">Get Directions</a></span>
       </p>
     </article>
@@ -139,8 +139,8 @@
         <b>PHONE #</b>: (555) 493-8283
         <br><br>
       <h3>Hours</h3>
-      Mon-Thus: 8AM-9PM<br>
-      Friday-Sun: 8AM-10PM<br>
+      Mon-Thus: 8AM-10PM<br>
+      Friday-Sun: 8AM-11PM<br>
       <span class="icon"><a target="_blank" href="https://www.google.com/maps">Get Directions</a></span>
       </p>
     </article>
@@ -152,8 +152,8 @@
         <b>PHONE #</b>: (555) 905-3428
         <br><br>
       <h3>Hours</h3>
-      Mon-Thus: 8AM-9PM<br>
-      Friday-Sun: 8AM-10PM<br>
+      Mon-Thus: 8AM-10PM<br>
+      Friday-Sun: 8AM-11PM<br1
       <span class="icon"><a target="_blank" href="https://www.google.com/maps">Get Directions</a></span>
       </p>
     </article>
@@ -190,14 +190,17 @@
   </footer>
 
   <script>
-    let resizeTimer;
-    window.addEventListener("resize", () => {
-      document.body.classList.add("resize-animation-stopper");
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(() => {
-        document.body.classList.remove("resize-animation-stopper");
+    //stop transitions on resize
+      let resizeTimer;
+      window.addEventListener("resize", () => {
+        document.body.classList.add("resize-animation-stopper");
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          document.body.classList.remove("resize-animation-stopper");
+        });
       });
-    });
+      //stop transitions on page load
+      document.body.classList.remove('js-stop-transition')
   </script>
 
 </body>

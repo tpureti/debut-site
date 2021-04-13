@@ -46,7 +46,7 @@
 
 </head>
 
-<body>
+<body class="preload-transitions">
   <nav aria-label="navigation">
     <div class="nav_cont" aria-label="navigation container">
     <div class="nav_title" aria-label="navigation title"><a href="home.html" aria-label="home" tabindex="0"><span class="text">Rusted Tavern</span></a></div>
@@ -136,20 +136,21 @@
 
     <article class="blurb item_one-third">
       <h2>The Rusted Tavern</h2>
-      <p>Cozy, lowkey, tasty, high quality service. These are some of the words that describe what it's like to spend an
-        evening at the Rusted Tavern. Come join us today! </p>
+      <p>Where you would get a scrumptious breakfast made of balanced healthy ingredients with no compromise in taste! Add that
+      with a choice of gourmet coffee or chai latte selections. </p>
     </article>
 
     <article class="blurb item_one-third">
       <h2>The Rusted Tavern</h2>
-      <p>Cozy, lowkey, tasty, high quality service. These are some of the words that describe what it's like to spend an
-        evening at the Rusted Tavern. Come join us today! </p>
+      <p>Where you find a powerful lunch menu infused with right mix of carbs and protein all freshly made and with immaculate
+      taste! Add that with a choice of fresh juices or probiotic concoctions! </p>
     </article>
 
     <article class="blurb item_one-third">
       <h2>The Rusted Tavern</h2>
-      <p>Cozy, lowkey, tasty, high quality service. These are some of the words that describe what it's like to spend an
-        evening at the Rusted Tavern. Come join us today! </p>
+      <p>Where you find some of the most delectable dinner entrees and dining choices. Enjoy a bird spiced up to perfection or a
+      snapper souped up or an eclectic selection of vegan dishes! End the evening with a choice of desserts and/or favorite
+      beverages. </p>
     </article>
   </main>
 
@@ -181,6 +182,7 @@
   </footer>
 
 <script>
+  //stop transitions on resize
   let resizeTimer;
   window.addEventListener("resize", () => {
   document.body.classList.add("resize-animation-stopper");
@@ -189,6 +191,11 @@
   document.body.classList.remove("resize-animation-stopper");
   });
   });
+  //stop transitions on page load
+  document.addEventListener("DOMContentLoaded", function () {
+      let node = document.querySelector('.preload-transitions');
+      node.classList.remove('preload-transitions');
+    });
 </script>
 </body>
 
