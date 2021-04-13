@@ -67,8 +67,6 @@
   color: var(--clr-bright-gold);
   @extend .title-shadow;
   //
-  transition-property: color, filter;
-  transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 
   &::after {
     font-family: "Font Awesome 5 Pro", "Font Awesome 5 Free";
@@ -81,8 +79,8 @@
 
   &:hover,
   &:focus {
-    /*transition-property: color, filter;
-    transition-duration: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045); */
+    transition-property: color, filter;
+    transition: 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     //
     outline: none;
     color: var(--clr-bright-red);
