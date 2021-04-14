@@ -128,11 +128,12 @@ nav {
     color: var(--clr-darker-gold);
     outline: none;
     //
-    //transition-property: none;
     transition: color 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+    backface-visibility: hidden;
     //focus states
     &:focus,
     &:hover {
+      backface-visibility: hidden;
       transition: color 0.5s cubic-bezier(0.77, 0, 0.175, 1);
       //colors
       color: var(--clr-bright-red);
