@@ -463,6 +463,7 @@ nav {
   position: relative;
   top: 0;
   z-index: 99;
+  flex-shrink: 1;
   background: #1c0606;
   border-bottom: 1px solid rgba(247, 190, 74, 0.1);
 }
@@ -475,6 +476,7 @@ nav {
 @media screen and (max-width: 600px) {
   nav {
     position: sticky;
+    height: 4.5rem;
   }
 }
 nav a {
@@ -557,7 +559,6 @@ nav a {
 @media screen and (max-width: 600px) {
   .nav_cont {
     flex-direction: column;
-    height: 4.5em;
     padding: 0;
   }
 }
@@ -588,7 +589,6 @@ nav a {
     font-size: 1.625rem;
     letter-spacing: 0.5px;
     justify-content: flex-end;
-    box-sizing: border-box;
   }
   .nav_cont .nav_links a:first-child {
     border: none;
@@ -655,13 +655,13 @@ nav a {
 @media screen and (max-width: 600px) {
   .nav_links {
     display: flex;
-    width: calc(100vw - 3px);
+    width: -webkit-fill-available;
     flex-direction: column;
     position: relative;
     transform: translateY(-230%);
     transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     background: var(--clr-darker-brown);
-    border: 1px solid rgba(247, 190, 74, 0.1);
+    border-top: 1px solid rgba(247, 190, 74, 0.1);
   }
 
   .show {
