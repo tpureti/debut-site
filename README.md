@@ -2,6 +2,8 @@
 
 A website concept based off a school project that has been improved from the original submission. This is intended to be a showcase of a simple, static website that is fully responsive.
 
+[Preview here](https://tpureti.github.io/debut-site/pages/home.html)
+
 **Languages Used**<br>
 HTML<br>
 SASS (SCSS)<br>
